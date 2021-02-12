@@ -10,8 +10,10 @@ def compute_stats():
         count = ('user_id',pd.Series.count),
         unique = ('user_id',pd.Series.nunique)
     )
-    stats.to_csv(f'{DATA_FOLDER}/stats_{TIMESTAMP}.csv',index=False,header=True)
+    #stats.to_csv(f'{DATA_FOLDER}/stats_{TIMESTAMP}.csv',index=False,header=True)
+    print(stats)
 
 
 if __name__ == "__main__":
+    print("Computation")
     compute_stats()
